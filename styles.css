@@ -1,0 +1,146 @@
+body {
+  background: linear-gradient(45deg, #f1db10, #ffffff);
+  color: rgb(111, 117, 201);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+#tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a {
+  background:
+    linear-gradient(
+      to right,
+      #312b10,
+      #312b10
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+  );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+header {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: flex;
+  align-items: center;
+  margin-right: 95vh;
+  padding-top: 400px;
+}
+
+header h1 {
+  font-size: 30px;
+  font-weight: 750;
+  color: #312b10;
+
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.linky {
+  margin-top: 70vh;
+  text-align: center;
+  align-items: center;
+  
+}
+
+.perspective-text {
+  color: white;
+  font-family: Arial;
+  font-size: 29px; /* Updated from 58px to 29px */
+  font-weight: 900;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.perspective-line {
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+p {
+  margin: 0;
+  height: 50px;
+  line-height: 50px;
+  transition: all 0.5s ease-in-out;
+}
+
+.perspective-line:nth-child(odd) {
+  transform: skew(60deg, -30deg) scaleY(0.667);
+}
+
+.perspective-line:nth-child(even) {
+  transform: skew(0deg, -30deg) scaleY(1.337);
+}
+
+.perspective-text:hover p {
+  transform: translate(0, -50px);
+}
+
+.perspective-line:nth-child(1) {
+  left: 9px;
+}
+
+.perspective-line:nth-child(2) {
+  left: 38px;
+  background: #f07e6e;
+}
+
+.perspective-line:nth-child(3) {
+  left: 67px;
+  background: #84cdfa;
+}
+
+.perspective-line:nth-child(4) {
+  left: 96px;
+  background: #5ad1cd;
+}
+
+.perspective-line:nth-child(5) {
+  left: 125px;
+}
+
+
+
+.scatterplot-container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto; /* Center the container */
+  padding: 2rem 0; /* Add some space around the container */
+}
+
+#scatterplot-graph {
+  display: block; /* Make the SVG a block-level element */
+  margin: 0 auto; /* Center the SVG within the container */
+}
